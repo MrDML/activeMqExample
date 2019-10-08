@@ -8,8 +8,8 @@ import javax.jms.*;
  *  http://localhost:8161(管理端口) 浏览器访问
  *  tcp://127.0.0.1:61616(服务端口) 代码访问
  *  =====================================
- *  http://120.27.2.108:8161(管理端口)
- *  tcp://120.27.2.108:61616(服务端口)
+ *  http://127.0.0.1:8161(管理端口)
+ *  tcp://127.0.0.1:61616(服务端口)
  * 点对点模式 接收方
  * @Auter MrDML
  * @Date 2019-10-08
@@ -18,7 +18,7 @@ public class QueueConsumer {
 
     public static void main(String[] args) throws Exception{
         //1.创建连接工厂
-        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp://120.27.2.108:61616");
+        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
         //2.获取连接
         Connection connection = connectionFactory.createConnection();
         //3.启动连接

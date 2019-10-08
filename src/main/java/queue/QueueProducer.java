@@ -11,11 +11,10 @@ import javax.jms.*;
  */
 public class QueueProducer {
 
-    // tcp://120.27.2.108:8161
 
     public static void main(String[] args) throws Exception{
         //1.创建连接工厂
-        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp://120.27.2.108:61616");
+        ConnectionFactory connectionFactory=new ActiveMQConnectionFactory("tcp://127.0.0.1:61616");
         //2.获取连接
         Connection connection = connectionFactory.createConnection();
         //3.启动连接
